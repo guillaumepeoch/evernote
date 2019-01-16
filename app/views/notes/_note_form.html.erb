@@ -1,0 +1,10 @@
+<%= form_for(@note) do |f| %>
+  <%= f.label 'Title', class: 'font-weight-bold' %>
+  <%= f.text_field :title, class: 'form-control' %>
+  
+  <%= f.label 'Content', class: 'margin-top font-weight-bold' %>
+  <%= f.text_area :content, size: "4x20", class: 'form-control' %>
+  
+  <%= f.submit 'Save', class: 'form-btn btn btn-primary' %>
+  <%= link_to "Cancel", '/notes', class: 'form-btn btn btn-secondary' %>
+<% end %>

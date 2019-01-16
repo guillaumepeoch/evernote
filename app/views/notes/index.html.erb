@@ -1,0 +1,22 @@
+<h1>Notes</h1>
+<%= link_to "+ New Note", '/notes/new', class: "btn btn-secondary" %>
+  <div class="row">
+  <% @notes.each do |note| %>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= note.title %></h5>
+          <p class="card-text"><%= truncate(note.content, length: 69) %></p>
+          <%= link_to 'Show', 
+                      'notes/'+note.id.to_s, 
+                      :class=>"btn btn-primary" %>
+          <%= link_to 'Destroy', 
+                      'notes/'+note.id.to_s, 
+                      data: {:confirm => 'Are you sure?'}, 
+                      :method => :delete,
+                      :class=>"btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
