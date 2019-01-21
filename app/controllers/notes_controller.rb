@@ -13,18 +13,15 @@ class NotesController < ApplicationController
   end
   
   def create
-    @note = Note.new(note_params)
-    if @note.save
-      redirect_to @note
+    if Note.create(note_params)
+      redirect_to :action => 'index'
     else
       render :new
     end
   end
   
   def update
-    note = Note.find(params[:id])
-    binding.pry
-    if note.update(note_params)
+    if Note.find(params[:id]).update(note_params)
       redirect_to :action => 'index'
     else
       render :new
@@ -35,8 +32,9 @@ class NotesController < ApplicationController
     if Note.destroy(params[:id])
         redirect_to :action => 'index'
     end
-      
   end
+  
+  private
   
   def note_params
     params.require(:note).permit(:title, :content)
