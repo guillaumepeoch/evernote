@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '4.2.1'
 gem 'jquery-rails'
 
+gem 'react-rails'
+
 gem 'pry', '~> 0.10.3'
 
 # Reduces boot times through caching; required in config/boot.rb
