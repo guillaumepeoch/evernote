@@ -5715,3 +5715,255 @@ Completed 200 OK in 5895ms (Views: 5875.6ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 2133ms (Views: 2126.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:19:19 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5552ms (Views: 5536.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:19:34 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 721ms (Views: 717.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:24:25 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 850ms (Views: 846.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:24:28 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 92ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:24:30 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 71ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:24:31 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:24:33 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:24:33 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:24:34 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:26:51 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:26:52 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:55:30 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 773ms (Views: 770.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 16:55:35 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 14:46:27 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Started GET "/" for 127.0.0.1 at 2019-01-22 14:46:31 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5970ms (Views: 5959.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2737ms (Views: 2730.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:46:39 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 64ms (Views: 53.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2019-01-22 14:47:03 -0800
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_note_form.html.erb (32.4ms)
+  Rendered notes/new.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:47:07 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:47:47 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:47:49 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:47:50 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:47:51 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:47:53 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2019-01-22 14:47:54 -0800
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_note_form.html.erb (2.9ms)
+  Rendered notes/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 14:47:57 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 14:49:11 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:49:13 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 63ms (Views: 58.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:49:27 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 14:49:30 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:49:31 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 14:49:33 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-22 14:49:34 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 57.4ms | ActiveRecord: 0.3ms)
+
+

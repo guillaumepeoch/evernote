@@ -9,16 +9,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body>  
+    <%= react_component('Navbar') %>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Evernote</a>
-      </div>
-    </nav>
-    
-    <div class='container-fluid'>
-      <%= react_component('Test') %>
+    <div class="container-fluid">
       <%= yield %>
     </div>
     
