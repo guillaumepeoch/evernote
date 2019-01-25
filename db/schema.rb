@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_15_205125) do
+ActiveRecord::Schema.define(version: 2019_01_25_224844) do
+
+  create_table "Folders", force: :cascade do |t|
+    t.string "name"
+    t.integer "note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "Notes", force: :cascade do |t|
     t.string "title"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "folder_id"
+    t.index ["folder_id"], name: "index_Notes_on_folder_id"
   end
 
 end
