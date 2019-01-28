@@ -1,2 +1,21 @@
-<h1>Folders#index</h1>
-<p>Find me in app/views/folders/index.html.erb</p>
+<h1>Folders</h1>
+<%= link_to "+ New Folder", '/folders/new', class: "btn btn-secondary" %>
+<div class="row">
+<% @folders.each do |folder| %>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= folder.name %></h5>
+        <%= link_to 'Show', 
+                    'folders/'+folder.id.to_s, 
+                    :class=>"btn btn-primary" %>
+        <%= link_to 'Destroy', 
+                    'folders/'+folder.id.to_s, 
+                    data: {:confirm => 'Are you sure?'}, 
+                    :method => :delete,
+                    :class=>"btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

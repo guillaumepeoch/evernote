@@ -6188,3 +6188,622 @@ Migrating to CreateFolders (20190125224844)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-01-25 15:21:08 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 433ms (Views: 421.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-25 15:21:11 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 63ms (Views: 50.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-25 15:21:16 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 57ms (Views: 50.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-28 10:13:01 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 461ms (Views: 450.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 10:13:05 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.6ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 69ms (Views: 58.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 10:13:09 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (24.7ms)
+  Rendered folders/new.html.erb within layouts/application (27.5ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `folder' for #<Folder >):
+    1: <%= form_for(@folder) do |f| %>
+    2:   <%= f.label 'Name', class: 'font-weight-bold' %>
+    3:   <%= f.text_field :folder, class: 'form-control' %>
+    4:   
+    5:   <%= f.submit 'Save', class: 'form-btn btn btn-primary' %>
+    6:   <%= link_to "Cancel", '/folders', class: 'form-btn btn btn-secondary' %>
+  
+app/views/folders/_folder_form.html.erb:3:in `block in _app_views_folders__folder_form_html_erb__4233122040154565290_70204919497620'
+app/views/folders/_folder_form.html.erb:1:in `_app_views_folders__folder_form_html_erb__4233122040154565290_70204919497620'
+app/views/folders/new.html.erb:2:in `_app_views_folders_new_html_erb__1079796956820634969_70204912315860'
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 10:15:09 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (1.6ms)
+  Rendered folders/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 77ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2019-01-28 10:15:15 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zUv7gNmzF0OGRLhL1UDVpPI3KB/NAaYi5yL3A4iYzaNu7O3pbq0klG5DYzxy4+BJ7SjsaiErWM6ufUGm9LfeiQ==", "folder"=>{"name"=>"folder"}, "commit"=>"Save"}
+HTTP Origin header (http://evil.com/) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:107:in `block in run_callbacks'
+activesupport (5.2.2) lib/active_support/callbacks.rb:136:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-28 12:43:09 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 434ms (Views: 424.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:43:12 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.5ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 66ms (Views: 55.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 12:43:14 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (12.8ms)
+  Rendered folders/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2019-01-28 12:44:15 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dULk8irhco+e0kTFqUC8drUBEglFgEFn9wH/rkOVUeypwRCzQq8+uoO2OHRMr/vvi33yCzGd52RVk5JXly/N1A==", "folder"=>{"name"=>"test"}, "commit"=>"Save"}
+HTTP Origin header (http://evil.com/) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:107:in `block in run_callbacks'
+activesupport (5.2.2) lib/active_support/callbacks.rb:136:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/folders" for 127.0.0.1 at 2019-01-28 12:47:19 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dULk8irhco+e0kTFqUC8drUBEglFgEFn9wH/rkOVUeypwRCzQq8+uoO2OHRMr/vvi33yCzGd52RVk5JXly/N1A==", "folder"=>{"name"=>"test"}, "commit"=>"Save"}
+HTTP Origin header (http://evil.com/) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:107:in `block in run_callbacks'
+activesupport (5.2.2) lib/active_support/callbacks.rb:136:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-28 12:47:25 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:47:27 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.4ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 72ms (Views: 63.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 12:47:30 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (2.1ms)
+  Rendered folders/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 91ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2019-01-28 12:47:35 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cvxIjJXVrzU9UAks5P7Nj9/9yV7q0NZBCMc5J0vckxCuf7zN/ZvjACA0dZ0BEYoW4YEpXJ7NcEKqVVTen2YPKA==", "folder"=>{"name"=>"e"}, "commit"=>"Save"}
+HTTP Origin header (http://evil.com/) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.2) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.2) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.2) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.2) lib/active_support/callbacks.rb:107:in `block in run_callbacks'
+activesupport (5.2.2) lib/active_support/callbacks.rb:136:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-28 12:48:55 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 567ms (Views: 555.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:48:58 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 69ms (Views: 61.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 12:48:59 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (7.7ms)
+  Rendered folders/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2019-01-28 12:49:05 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//GgvsRyav9eJB1wIFtzN7L3bUcnl913l6X5mBIIi6IjclT/rDwmykNAYcHFtDSujIuNRVOKe3Q1N5RhxrIXmg==", "folder"=>{"name"=>"folder1"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:16
+  [1m[36mFolder Create (7.4ms)[0m  [1m[32mINSERT INTO "folders" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "folder1"], ["created_at", "2019-01-28 20:49:16.109569"], ["updated_at", "2019-01-28 20:49:16.109569"]]
+  ↳ app/controllers/folders_controller.rb:16
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:16
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 10178ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:49:16 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/1" for 127.0.0.1 at 2019-01-28 12:49:32 -0800
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:7
+  Rendering folders/show.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (2.4ms)
+  Rendered folders/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 72ms (Views: 59.4ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/folders/1" for 127.0.0.1 at 2019-01-28 12:49:42 -0800
+Processing by FoldersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BV2BBdQinoDJ33dS9cxLtnX7mq/TRHnBnxYxZXfj9qbAdw2VVks14mtW0VpyuQuGfPeiM8wnLXJRAA7pE73C5A==", "folder"=>{"name"=>"first folder update"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:23
+  [1m[36mFolder Update (0.5ms)[0m  [1m[33mUPDATE "folders" SET "name" = ?, "updated_at" = ? WHERE "folders"."id" = ?[0m  [["name", "first folder update"], ["updated_at", "2019-01-28 20:49:42.350086"], ["id", 1]]
+  ↳ app/controllers/folders_controller.rb:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:23
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:49:42 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 88ms (Views: 84.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/2" for 127.0.0.1 at 2019-01-28 12:49:46 -0800
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:7
+  Rendering folders/show.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (2.1ms)
+  Rendered folders/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 82ms (Views: 77.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/folders/2" for 127.0.0.1 at 2019-01-28 12:49:51 -0800
+Processing by FoldersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sfgqqnpi7Mft7J1e+CoIVmf2DQvPszgZ8USSRNfRwZMYG3EOlHQIZhP8qR5be0EGJ9g3NLsbw39Vs6Xhkq2wzA==", "folder"=>{"name"=>"folder2 then..."}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:23
+  [1m[36mFolder Update (0.4ms)[0m  [1m[33mUPDATE "folders" SET "name" = ?, "updated_at" = ? WHERE "folders"."id" = ?[0m  [["name", "folder2 then..."], ["updated_at", "2019-01-28 20:49:51.194713"], ["id", 2]]
+  ↳ app/controllers/folders_controller.rb:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:23
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:49:51 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 12:49:53 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (2.0ms)
+  Rendered folders/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 81ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2019-01-28 12:49:56 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83vV70/Ye+uUu5D85PoAQLpKr93BV/b4qUklDpHOWU0v+CGuJ5Y33onf7E0BFUfZhDZP37VKUPsL20j3RXTFdQ==", "folder"=>{"name"=>"test"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:15
+  [1m[36mFolder Create (0.6ms)[0m  [1m[32mINSERT INTO "folders" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2019-01-28 20:49:56.655334"], ["updated_at", "2019-01-28 20:49:56.655334"]]
+  ↳ app/controllers/folders_controller.rb:15
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:15
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:49:56 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/folders/3" for 127.0.0.1 at 2019-01-28 12:49:59 -0800
+Processing by FoldersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GAPqHFFqfkgQ3M73olK7SHllYVEsVq2E4/+EIrZ9XgK7pPx15nRNn/jbFYAF8Y6lZnqlJMB8U2iqoDKHylJNKA==", "id"=>"3"}
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:31
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:31
+  [1m[36mFolder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "folders" WHERE "folders"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/folders_controller.rb:31
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:31
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 10ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 12:49:59 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.2ms)
+
+

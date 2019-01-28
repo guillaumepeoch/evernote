@@ -1,0 +1,7 @@
+<%= form_for(@folder) do |f| %>
+  <%= f.label 'Name', class: 'font-weight-bold' %>
+  <%= f.text_field :name, class: 'form-control' %>
+  
+  <%= f.submit 'Save', class: 'form-btn btn btn-primary' %>
+  <%= link_to "Cancel", '/folders', class: 'form-btn btn btn-secondary' %>
+<% end %>
