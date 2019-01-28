@@ -6807,3 +6807,129 @@ Processing by FoldersController#index as HTML
 Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-28 13:02:44 -0800
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 13:02:44 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+Processing by FoldersController#new as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 462ms (Views: 447.6ms | ActiveRecord: 0.0ms)
+
+
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (14.7ms)
+  Rendered folders/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 593ms (Views: 130.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 13:02:47 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/1" for 127.0.0.1 at 2019-01-28 13:03:07 -0800
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:7
+  Rendering folders/show.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (2.6ms)
+  Rendered folders/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 92ms (Views: 74.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 13:03:11 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 69ms (Views: 64.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 13:03:49 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (2.0ms)
+  Rendered folders/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 70ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 13:03:50 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 93ms (Views: 88.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-28 13:03:51 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (1.9ms)
+  Rendered folders/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2019-01-28 13:03:54 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HXCvfXr3vgUYkRZSLriEzIiuVZDEjnmkCjKntumvZ+fB81s8ErnyMAX1auPLV8NVttK1krCT36eooMpPPRX73w==", "folder"=>{"name"=>""}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:15
+  [1m[36mFolder Create (0.5ms)[0m  [1m[32mINSERT INTO "folders" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2019-01-28 21:03:54.104245"], ["updated_at", "2019-01-28 21:03:54.104245"]]
+  ↳ app/controllers/folders_controller.rb:15
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:15
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 13:03:54 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/folders/4" for 127.0.0.1 at 2019-01-28 13:03:58 -0800
+Processing by FoldersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/tV5G3N5oA41p5PkNZ++Ao8yNeO+7akls6VGuwcGFeldcm9yxGeT2d2gSJOSPIvvkC3xllLHV8n6+vAeeykGww==", "id"=>"4"}
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:31
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:31
+  [1m[36mFolder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "folders" WHERE "folders"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/folders_controller.rb:31
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:31
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-28 13:03:58 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:4
+  Rendered folders/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2019-01-28 13:04:09 -0800
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/views/notes/index.html.erb:4
+  Rendered notes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 87ms (Views: 80.1ms | ActiveRecord: 0.7ms)
+
+
