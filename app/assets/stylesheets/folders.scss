@@ -1,3 +1,75 @@
 // Place all the styles related to the folders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.sidemenu {
+  position: fixed;
+  left: 0;
+  top:0;
+  background: LightSeaGreen;
+  height:100%;
+  width: 200px;
+  z-index:0;
+  padding-top:60px;
+}
+
+.item {
+  color:black;
+  cursor: pointer;
+  border-bottom: 1px black solid 
+}
+
+.main {
+  margin-left:230px;
+  padding: 20px;
+}
+
+
+
+
+
+// body {
+//   padding-top: 90px; }
+//   @media (min-width: 768px) {
+//     body {
+//       padding-top: 0; } }
+// 
+// @media (min-width: 768px) {
+//   body {
+//     margin-left: 232px; } }
+// 
+// .navbar.fixed-left {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: -1; }
+// 
+//   @media (min-width: 768px) {
+//     .navbar.fixed-left {
+//       background-color: green;
+//       bottom: 0;
+//       width: 232px;
+//       flex-flow: column nowrap;
+//       align-items: flex-start; }
+//       .navbar.fixed-left .navbar-collapse {
+//         flex-grow: 0;
+//         flex-direction: column;
+//         width: 100%; }
+//         .navbar.fixed-left .navbar-collapse .navbar-nav {
+//           flex-direction: column;
+//           width: 100%; }
+//           .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item {
+//             width: 100%; }
+//             .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+//               top: 0; } }
+//   @media (min-width: 768px) {
+//     .navbar.fixed-left {
+//       right: auto; }
+//       .navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after {
+//         border-top: 0.3em solid transparent;
+//         border-left: 0.3em solid;
+//         border-bottom: 0.3em solid transparent;
+//         border-right: none;
+//         vertical-align: baseline; }
+//       .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu {
+//         left: 100%; } }
