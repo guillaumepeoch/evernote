@@ -8361,3 +8361,1680 @@ Processing by FoldersController#get_notes as */*
 Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-29 09:52:50 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 708ms (Views: 697.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 09:52:53 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.5ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:5
+  Rendered folders/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 56ms (Views: 44.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 09:52:58 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant FoldersController::Notes):
+  
+app/controllers/folders_controller.rb:37:in `get_notes'
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 09:53:20 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.9ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:5
+  Rendered folders/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 100ms (Views: 91.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 09:53:23 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant FoldersController::Notes):
+  
+app/controllers/folders_controller.rb:38:in `get_notes'
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 09:53:29 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant FoldersController::Notes):
+  
+app/controllers/folders_controller.rb:38:in `get_notes'
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 09:53:32 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:5
+  Rendered folders/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 09:53:36 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant FoldersController::Notes):
+  
+app/controllers/folders_controller.rb:38:in `get_notes'
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 09:54:12 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:5
+  Rendered folders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 66ms (Views: 59.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 09:54:14 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:38
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 09:54:25 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:5
+  Rendered folders/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 64ms (Views: 58.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 09:54:28 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:38
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 09:56:36 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:5
+  Rendered folders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 67ms (Views: 59.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 09:56:38 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 09:56:40 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 09:56:40 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mNote Load (6.6ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/folders/new" for 127.0.0.1 at 2019-01-29 09:57:56 -0800
+Processing by FoldersController#new as HTML
+  Rendering folders/new.html.erb within layouts/application
+  Rendered folders/_folder_form.html.erb (17.9ms)
+  Rendered folders/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2019-01-29 09:58:02 -0800
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OMbf7XwWBSpdJuQQJzZ3vCwS36Z9nAWBqXCUezgfgHRSxCC+7ug6kj2x8aiaY2eBIJccRmeEuy8JeTsv7g7jJA==", "folder"=>{"name"=>"ouiii"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/folders_controller.rb:15
+  [1m[36mFolder Create (0.9ms)[0m  [1m[32mINSERT INTO "folders" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "ouiii"], ["created_at", "2019-01-29 17:58:02.614454"], ["updated_at", "2019-01-29 17:58:02.614454"]]
+  ↳ app/controllers/folders_controller.rb:15
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/folders_controller.rb:15
+Redirected to http://localhost:3000/folders
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 09:58:02 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:5
+  Rendered folders/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 09:58:08 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:00:57 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:01:31 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:01:39 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:02:05 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:02:34 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:02:39 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:02:40 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:02:40 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:02:41 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:02:41 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:02:41 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:02:42 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:02:43 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:04:15 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:05:49 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:05:51 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:05:51 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:05:52 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:05:52 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:05:53 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:05:53 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:05:54 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:05:54 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:05:54 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:05:55 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:05:56 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:05:57 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:05:57 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:08:12 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:08:15 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:08:16 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:08:16 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:08:17 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:08:17 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:08:19 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:11:08 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:11:09 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:11:10 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:11:10 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:11:11 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:11:11 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:11:12 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:11:13 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:11:14 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:11:14 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:11:15 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:11:15 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:18:51 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:18:52 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("title", "content", "created_at", "updated_at", "folder_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "titre"], ["content", "contenue"], ["created_at", "2019-01-29 18:19:55.195054"], ["updated_at", "2019-01-29 18:19:55.195054"], ["folder_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:20:00 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:20:02 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:20:18 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:20:20 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT  "folders".* FROM "folders" WHERE "folders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("title", "content", "created_at", "updated_at", "folder_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "titre2"], ["content", "contenue2"], ["created_at", "2019-01-29 18:22:51.416214"], ["updated_at", "2019-01-29 18:22:51.416214"], ["folder_id", 1]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:22:54 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 81ms (Views: 77.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:22:56 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folders_controller.rb:37
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:23:13 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 64ms (Views: 58.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:23:16 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:23:17 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:38
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:25:17 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:38
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:25:18 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/controllers/folders_controller.rb:38
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:25:19 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:38
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:29:03 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.4ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 82ms (Views: 73.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:05 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Note Load (0.1ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `notes' for #<FoldersController:0x00007faf22ce5c10>
+Did you mean?  @notes):
+  
+app/controllers/folders_controller.rb:39:in `get_notes'
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:06 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `notes' for #<FoldersController:0x00007faf22fcbda8>
+Did you mean?  @notes):
+  
+app/controllers/folders_controller.rb:39:in `get_notes'
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:07 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `notes' for #<FoldersController:0x00007faf22d4c3e8>
+Did you mean?  @notes):
+  
+app/controllers/folders_controller.rb:39:in `get_notes'
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:08 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `notes' for #<FoldersController:0x00007faf243654e0>
+Did you mean?  @notes):
+  
+app/controllers/folders_controller.rb:39:in `get_notes'
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:09 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `notes' for #<FoldersController:0x00007faf25915cb8>
+Did you mean?  @notes):
+  
+app/controllers/folders_controller.rb:39:in `get_notes'
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:10 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Note Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."folder_id" = ? LIMIT ?[0m  [["folder_id", 1], ["LIMIT", 11]]
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `notes' for #<FoldersController:0x00007faf25215c60>
+Did you mean?  @notes):
+  
+app/controllers/folders_controller.rb:39:in `get_notes'
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:29:21 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 79ms (Views: 71.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:29:23 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/controllers/folders_controller.rb:39
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:24 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:39
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:29:26 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:39
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:41:56 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.3ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 303ms (Views: 276.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:41:59 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:40
+Completed 200 OK in 19ms (Views: 7.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:42:00 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:40
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:42:00 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:40
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 10:42:01 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (4.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/controllers/folders_controller.rb:40
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 10:42:01 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/controllers/folders_controller.rb:40
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 10:42:02 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/controllers/folders_controller.rb:40
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 10:42:03 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/controllers/folders_controller.rb:40
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 10:46:34 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (1.9ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1544.9ms)
+Completed 500 Internal Server Error in 1575ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `res' for #<#<Class:0x00007faf1c497a28>:0x00007faf1d710b78>):
+    29:     }).
+    30:     then((res)=>{
+    31:       console.log(res);
+    32:       <% @notes = res %>
+    33:       $('.card-title').html(id);
+    34:     }).
+    35:     catch(function(err){
+  
+app/views/folders/index.html.erb:32:in `_app_views_folders_index_html_erb___894668845422646862_70195044979060'
+Started GET "/" for 127.0.0.1 at 2019-01-29 11:10:51 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpeoch/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 419ms (Views: 409.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:10:54 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 58ms (Views: 46.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:12:08 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 11:19:52 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:19:54 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 63ms (Views: 54.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/get_notes/1?_=1548789592918" for 127.0.0.1 at 2019-01-29 11:19:55 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789592918", "id"=>"1"}
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::MissingTemplate (Missing template folders/get_notes, application/get_notes with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/gpeoch/Documents/GitHub/evernote/app/views"
+):
+  
+app/controllers/folders_controller.rb:42:in `get_notes'
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:21:15 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 61ms (Views: 54.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_notes/1?_=1548789675795" for 127.0.0.1 at 2019-01-29 11:21:17 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789675795", "id"=>"1"}
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::MissingTemplate (Missing template folders/get_notes, application/get_notes with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/gpeoch/Documents/GitHub/evernote/app/views"
+):
+  
+app/controllers/folders_controller.rb:41:in `get_notes'
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:21:48 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1?_=1548789708742" for 127.0.0.1 at 2019-01-29 11:21:51 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789708742", "id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (14.7ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2?_=1548789708743" for 127.0.0.1 at 2019-01-29 11:21:52 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789708743", "id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/5?_=1548789708744" for 127.0.0.1 at 2019-01-29 11:21:54 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789708744", "id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6?_=1548789708745" for 127.0.0.1 at 2019-01-29 11:21:55 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789708745", "id"=>"6"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:22:29 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1?_=1548789749672" for 127.0.0.1 at 2019-01-29 11:22:30 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749672", "id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.2ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2?_=1548789749673" for 127.0.0.1 at 2019-01-29 11:22:31 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749673", "id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/5?_=1548789749674" for 127.0.0.1 at 2019-01-29 11:22:32 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749674", "id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/6?_=1548789749675" for 127.0.0.1 at 2019-01-29 11:22:33 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749675", "id"=>"6"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1?_=1548789749676" for 127.0.0.1 at 2019-01-29 11:22:34 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749676", "id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1?_=1548789749677" for 127.0.0.1 at 2019-01-29 11:22:36 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749677", "id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2?_=1548789749678" for 127.0.0.1 at 2019-01-29 11:22:36 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749678", "id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/5?_=1548789749679" for 127.0.0.1 at 2019-01-29 11:22:37 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749679", "id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/5?_=1548789749680" for 127.0.0.1 at 2019-01-29 11:22:37 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749680", "id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1?_=1548789749681" for 127.0.0.1 at 2019-01-29 11:22:45 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749681", "id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/2?_=1548789749682" for 127.0.0.1 at 2019-01-29 11:22:45 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749682", "id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1?_=1548789749683" for 127.0.0.1 at 2019-01-29 11:22:46 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749683", "id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1?_=1548789749684" for 127.0.0.1 at 2019-01-29 11:22:59 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749684", "id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/2?_=1548789749685" for 127.0.0.1 at 2019-01-29 11:22:59 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"_"=>"1548789749685", "id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:24:16 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 62ms (Views: 54.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:24:18 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:24:21 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:24:37 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:24:38 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:24:39 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:25:04 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:25:05 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:25:05 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:25:06 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:25:06 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 11:25:07 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:25:07 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:25:08 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:25:08 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:27:32 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.2ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 93ms (Views: 88.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:27:34 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.1ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:27:35 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:27:36 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:27:37 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  Rendered folders/get_notes.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2019-01-29 11:33:10 -0800
+Processing by FoldersController#index as HTML
+  Rendering folders/index.html.erb within layouts/application
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT "folders".* FROM "folders"[0m
+  ↳ app/views/folders/index.html.erb:6
+  Rendered folders/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:33:13 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (2.5ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:33:15 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:33:17 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.8ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:33:19 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:33:20 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (2.3ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 11:33:21 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:33:22 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:35:28 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:35:30 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:35:30 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:35:43 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:35:44 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 11:35:45 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.8ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:35:45 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:35:45 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 11:35:46 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:35:46 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:35:47 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:35:47 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/5" for 127.0.0.1 at 2019-01-29 11:35:48 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"5"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 5]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/2" for 127.0.0.1 at 2019-01-29 11:35:48 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"2"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 2]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.6ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_notes/6" for 127.0.0.1 at 2019-01-29 11:35:49 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"6"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 6]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.5ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_notes/1" for 127.0.0.1 at 2019-01-29 11:35:53 -0800
+Processing by FoldersController#get_notes as */*
+  Parameters: {"id"=>"1"}
+  Rendering folders/get_notes.html.erb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:2
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."folder_id" = ?[0m  [["folder_id", 1]]
+  ↳ app/views/folders/get_notes.html.erb:5
+  Rendered folders/get_notes.html.erb (1.7ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+

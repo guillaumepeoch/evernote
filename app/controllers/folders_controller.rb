@@ -34,9 +34,8 @@ class FoldersController < ApplicationController
   end
   
   def get_notes
-    folder = Folder.find(params[:id])
-    puts "folder: #{folder}"
-    render :json => folder.notes
+    @notes = Note.where(folder_id: params[:id])
+    render :layout => false
   end
   
   private
