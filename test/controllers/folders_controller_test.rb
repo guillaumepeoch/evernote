@@ -4,6 +4,7 @@ class FoldersControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get '/folders'
     assert_response :success
+    #assert_select 'h1', 'Folder'
   end
   
   # test "should get show" do

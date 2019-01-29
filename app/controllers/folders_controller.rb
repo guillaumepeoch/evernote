@@ -1,4 +1,4 @@
-class FoldersController < ApplicationController
+class FoldersController < ApplicationController  
   def index
     @folders = Folder.all
   end
@@ -31,6 +31,12 @@ class FoldersController < ApplicationController
     if Folder.destroy(params[:id])
         redirect_to :action => 'index'
     end
+  end
+  
+  def get_notes
+    folder = Folder.find(params[:id])
+    puts "folder: #{folder}"
+    render :json => folder.notes
   end
   
   private

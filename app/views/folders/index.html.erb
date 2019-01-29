@@ -1,21 +1,28 @@
 <h1>Folders</h1>
 <%= link_to "+ New Folder", '/folders/new', class: "btn btn-secondary" %>
 <div class="row">
-<% @folders.each do |folder| %>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><%= folder.name %></h5>
-        <%= link_to 'Show', 
-                    'folders/'+folder.id.to_s, 
-                    :class=>"btn btn-primary" %>
-        <%= link_to 'Destroy', 
-                    'folders/'+folder.id.to_s, 
-                    data: {:confirm => 'Are you sure?'}, 
-                    :method => :delete,
-                    :class=>"btn btn-danger" %>
-      </div>
-    </div>
+  <div class="col-sm-4 list-group">
+    <% @folders.each do |folder| %>
+      <a class="list-group-item list-group-item-action" onClick="showNotes(<%= folder.id %>)" >
+        <%= folder.name %>
+      </a>
+    <% end %>
   </div>
-<% end %>
 </div>
+
+<script type="text/javascript">
+  function showNotes(id){
+    const url = '/get_notes/'+id;
+    console.log(url)
+    fetch(url).
+    then(function(res){
+      return res.json();
+    }).
+    then(function(res){
+      console.log(res);
+    }).
+    catch(function(err){
+      console.log(err);
+    })
+  }
+</script>

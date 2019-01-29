@@ -1,2 +1,13 @@
 <h1>Folder</h1>
 <%= render(:partial => 'folder_form', :locals => {:f => @folder}) %>
+<%= render(:partial => 'notes/note_form', :locals => {:f => @note}) %>
+
+<% if @notes.length == 0 %>
+  <p>
+    No Notes
+  </p>
+<% else %>
+  <p>
+    We have some Notes
+  </p>
+<% end %>
