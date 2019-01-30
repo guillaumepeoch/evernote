@@ -1,20 +1,12 @@
-<div class="card-header">
-  Note size: <%= @notes.size %>
-</div>
-<div class="card-body">
-  <% @notes.each do |note| %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= note.title %></h5>
-        <p class="card-text"><%= note.content %></p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
+<div class="notessidemenu">
+  <% if @notes.empty? %>
+    <p>
+      No Notes..
+    </p>
   <% end %>
-  <% if @notes.size == 0 %>
-    <h5 class="card-title">No Notes yet...</h5>
-    <p class="card-text"></p>
-    <a href="#" class="btn btn-primary">New Note</a>
+  <% @notes.each do |note| %>
+    <div class="item" onClick="showNote(<%= note.id %>)" >
+      <%= note.title %>
+    </div>
   <% end %>
 </div>
