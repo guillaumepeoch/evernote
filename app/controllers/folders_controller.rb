@@ -5,10 +5,15 @@ class FoldersController < ApplicationController
 
   def show
     @folder = Folder.find(params[:id])
+    @notes = @folder.notes
   end
 
   def new
     @folder = Folder.new
+  end
+  
+  def edit
+    @folder = Folder.find(params[:id])
   end
 
   def create
@@ -23,7 +28,7 @@ class FoldersController < ApplicationController
     if Folder.find(params[:id]).update(folder_params)
       redirect_to :action => 'index'
     else
-      render :new
+      render :edit
     end
   end
 
@@ -34,8 +39,9 @@ class FoldersController < ApplicationController
   end
   
   def get_notes
+    @folder_id = params[:id];
     @notes = Note.where(folder_id: params[:id])
-    render :layout => false
+    #render :layout => false
   end
   
   private

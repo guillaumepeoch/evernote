@@ -1,7 +1,8 @@
 class NotesController < ApplicationController
+  # before_action :set_folder_id, :only => [:new, :create, :show]
   
   def index
-    @notes = Note.all
+    @notes = Note.where(folder_id: params[:folder_id])
   end
   
   def show
@@ -9,12 +10,16 @@ class NotesController < ApplicationController
   end
   
   def new
-    @note = Note.new
+    set_folder_id(params[:folder_id])
+    @note = Note.new({folder_id: @folder_id})
   end
   
   def create
-    if Note.create(note_params)
-      redirect_to :action => 'index'
+    note = Note.new(note_params)
+    note.folder_id = @folder_id
+    if Note.create()
+      @notes = Note.where(folder_id: @folder_id)
+      render :index
     else
       render :new
     end
@@ -38,6 +43,10 @@ class NotesController < ApplicationController
   
   def note_params
     params.require(:note).permit(:title, :content)
+  end
+  
+  def set_folder_id(id)
+    @folder_id = id
   end
   
 end

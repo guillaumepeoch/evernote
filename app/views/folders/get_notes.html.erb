@@ -1,12 +1,35 @@
-<div class="notessidemenu">
-  <% if @notes.empty? %>
-    <p>
-      No Notes..
-    </p>
-  <% end %>
-  <% @notes.each do |note| %>
-    <div class="item" onClick="showNote(<%= note.id %>)" >
-      <%= note.title %>
+
+  <div class="notessidemenu">
+    <div id="new-folder" onClick="newNote(<%= @folder_id %>)">
+      <div id="new-note-plus">+</div>
+      <div class='inline'> New Note </div>
     </div>
-  <% end %>
-</div>
+    <% if @notes.empty? %>
+      <p>
+        No Notes..
+      </p>
+    <% end %>
+    <% @notes.each do |note| %> 
+        <div class="item">
+          <%= link_to note.title, controller: "notes", action: "show", id: note.id %>
+        </div>
+    <% end %>
+  </div>
+
+
+<script type="text/javascript">
+  function newNote(id){
+    console.log(id);
+    fetch('/new/notes/'+id).
+    then(function(res){
+      return res.text();
+    }).
+    then((res)=>{
+      console.log(res);
+      $('#modal-holder').html(res).find('.modal').modal()
+    }).
+    catch(function(err){
+      console.log(err);
+    })
+  }
+</script>

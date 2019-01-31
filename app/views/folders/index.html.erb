@@ -1,63 +1,17 @@
-<div class="foldersidemenu">
-  <div id="new-folder" onClick="newFolder()">
-    <div id="new-folder-plus">+</div>
-    <div class='inline'> New Folder </div>
-  </div>
+<h1>Folders</h1>
+<%= link_to 'New Folder', new_folder_path, class:'btn btn-primary' %>
+<ul class="list-group">
   <% @folders.each do |folder| %>
-    <div class="item" onClick="showNotes(<%= folder.id %>)" >
-      <%= folder.name %>
-    </div>
+    <li class="list-group-item d-flex align-items-center">
+      <div class="mr-auto p-2">
+        <span class="badge badge-primary badge-pill"><%= folder.notes.size %></span>
+        <%= folder.name %>
+      </div>
+      <div class="p-2">
+        <%= link_to 'Notes', folder_notes_path(folder.id), class:'btn btn-success' %>
+        <%= link_to 'Change Name', edit_folder_path(folder.id), class:'btn btn-secondary' %>
+        <%= link_to "Delete", folder_path(folder), :method => :delete, class:'btn btn-danger' %>
+      </div>
+    </li>
   <% end %>
-</div>
-
-<div id="notes-target">
-</div>
-
-<div class="main"></div>
-
-<div id="modal-holder"></div>
-
-<script type="text/javascript" data-turbolinks-eval=false>
-  function showNotes(id){
-    fetch('/get_notes/'+id).
-    then(function(res){
-      return res.text();
-    }).
-    then((res)=>{
-      $("#notes-target").html(res);
-    }).
-    catch(function(err){
-      console.log(err);
-    })
-  }
-  
-
-  function showNote(id){
-    fetch('/get_note/'+id).
-    then(function(res){
-      return res.text();
-    }).
-    then((res)=>{
-      $("#note-target").html(res);
-    }).
-    catch(function(err){
-      console.log(err);
-    })
-  }
-  
-  
-  function newFolder(){
-    console.log('New Folder');
-    fetch('/folders/new').
-    then(function(res){
-      return res.text();
-    }).
-    then(function(res){
-      $('#modal-holder').html(res).find('.modal').modal()
-    }).
-    catch(function(err){
-      console.log(err);
-    });
-  }
-  
-</script>
+</ul>
