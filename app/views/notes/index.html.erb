@@ -10,7 +10,7 @@
       <a href="/folders/<%= note.folder_id %>/notes/<%= note.id %>" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1"><%= note.title %></h5>
-          <small>3 days ago</small>
+          <small><%= days_ago note.updated_at %></small>
         </div>
         <p class="mb-1"><%= note.content %></p>
         <small>Donec id elit non mi porta.</small>

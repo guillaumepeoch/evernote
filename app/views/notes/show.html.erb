@@ -1,6 +1,2 @@
-<h1 class="top-margin">
-  <%= @note.title %>
-</h1>
-<div class="content">
-  <%= @note.content %>
-</div>
+<h1>New Note</h1>
+<%= render(:partial => 'note_form', :folder => @folder, :note => @note) %>
