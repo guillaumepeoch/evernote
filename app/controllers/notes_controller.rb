@@ -3,6 +3,7 @@ class NotesController < ApplicationController
   
   def index
     @notes = Note.where(folder_id: params[:folder_id])
+    @folder = Folder.find(params[:folder_id])
   end
   
   def show
@@ -10,18 +11,16 @@ class NotesController < ApplicationController
   end
   
   def new
-    set_folder_id(params[:folder_id])
-    @note = Note.new({folder_id: @folder_id})
+    @folder = Folder.find(params[:folder_id])
+    @note = Note.new(folder_id: params[:folder_id])
   end
   
   def create
-    note = Note.new(note_params)
-    note.folder_id = @folder_id
-    if Note.create()
-      @notes = Note.where(folder_id: @folder_id)
-      render :index
+    @folder = Folder.find(params[:folder_id])
+    if @folder.notes.create(note_params)
+      redirect_to :action => 'index'
     else
-      render :new
+      redirect_to :action => 'new'
     end
   end
   

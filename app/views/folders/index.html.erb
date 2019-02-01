@@ -1,5 +1,5 @@
 <h1>Folders</h1>
-<%= link_to 'New Folder', new_folder_path, class:'btn btn-primary' %>
+<%= link_to 'New Folder', new_folder_path, class:'btn btn-secondary' %>
 <ul class="list-group">
   <% @folders.each do |folder| %>
     <li class="list-group-item d-flex align-items-center">
@@ -9,7 +9,7 @@
       </div>
       <div class="p-2">
         <%= link_to 'Notes', folder_notes_path(folder.id), class:'btn btn-success' %>
-        <%= link_to 'Change Name', edit_folder_path(folder.id), class:'btn btn-secondary' %>
+        <%= link_to 'Change Name', edit_folder_path(folder.id), class:'btn btn-primary' %>
         <%= link_to "Delete", folder_path(folder), :method => :delete, class:'btn btn-danger' %>
       </div>
     </li>

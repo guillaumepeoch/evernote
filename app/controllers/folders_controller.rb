@@ -41,7 +41,6 @@ class FoldersController < ApplicationController
   def get_notes
     @folder_id = params[:id];
     @notes = Note.where(folder_id: params[:id])
-    #render :layout => false
   end
   
   private
