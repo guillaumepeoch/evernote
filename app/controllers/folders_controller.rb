@@ -1,11 +1,6 @@
 class FoldersController < ApplicationController  
   def index
-    @folders = Folder.all
-  end
-
-  def show
-    @folder = Folder.find(params[:id])
-    @notes = @folder.notes
+    @folders = Folder.order('updated_at DESC')
   end
 
   def new
