@@ -7,14 +7,16 @@
 <% else %>
   <div class="list-group">
     <% @notes.each do |note| %>
-      <a href="/folders/<%= note.folder_id %>/notes/<%= note.id %>" class="list-group-item list-group-item-action">
+      <div class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1"><%= note.title %></h5>
           <small><%= days_ago note.updated_at %></small>
         </div>
         <p class="mb-1"><%= note.content %></p>
         <small>Donec id elit non mi porta.</small>
-      </a>
+        <%= link_to 'Show', folder_note_path(@folder.id, note.id), class:'btn btn-primary' %>
+        <%= link_to 'Edit', edit_folder_note_path(@folder.id, note.id), class:'btn btn-success' %>
+      </div>
     <% end %>
   </div>
 <% end %>

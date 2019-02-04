@@ -9,6 +9,11 @@ class NotesController < ApplicationController
     @folder = Folder.find(params[:folder_id])
   end
   
+  def edit
+    @folder = Folder.find(params[:folder_id])
+    @note = Note.find(params[:id])
+  end
+    
   def new
     @folder = Folder.find(params[:folder_id])
     @note = Note.new(folder_id: params[:folder_id])
