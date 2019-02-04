@@ -13,6 +13,9 @@
     <%= react_component('Navbar') %>
     
     <div class="container main">
+      <% if flash[:notice] %>
+        <div class="alert alert-primary" role="alert"><%= flash[:notice] %></div>
+      <% end %>
       <%= yield %>
     </div>
     

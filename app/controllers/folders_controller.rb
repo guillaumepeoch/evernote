@@ -18,6 +18,7 @@ class FoldersController < ApplicationController
 
   def create
     if Folder.create(folder_params)
+      flash[:notice] = "The folder #{folder_params[:name]} was created successfully"
       redirect_to :action => 'index'
     else
       render :new
@@ -26,6 +27,7 @@ class FoldersController < ApplicationController
 
   def update
     if Folder.find(params[:id]).update(folder_params)
+      flash[:notice] = "The folder #{folder_params[:name]} was updated successfully"
       redirect_to :action => 'index'
     else
       render :edit
@@ -34,6 +36,7 @@ class FoldersController < ApplicationController
 
   def destroy
     if Folder.destroy(params[:id])
+        flash[:notice] = "The folder was deleted successfully"
         redirect_to :action => 'index'
     end
   end

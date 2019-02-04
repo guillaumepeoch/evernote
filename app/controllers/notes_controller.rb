@@ -16,12 +16,13 @@ class NotesController < ApplicationController
     
   def new
     @folder = Folder.find(params[:folder_id])
-    @note = Note.new(folder_id: params[:folder_id])
+    @note = @folder.notes.new
   end
   
   def create
     @folder = Folder.find(params[:folder_id])
     if @folder.notes.create(note_params)
+      flash[:notice] = "The Note #{note_params[:title]} was created successfully"
       redirect_to :action => 'index'
     else
       redirect_to :action => 'new'
@@ -30,6 +31,7 @@ class NotesController < ApplicationController
   
   def update
     if Note.find(params[:id]).update(note_params)
+      flash[:notice] = "The Note #{note_params[:title]} was updated successfully"
       redirect_to :action => 'index'
     else
       render :new
@@ -38,7 +40,9 @@ class NotesController < ApplicationController
   
   def destroy
     if Note.destroy(params[:id])
-        redirect_to :action => 'index'
+      binding.pry
+      flash[:notice] = "The Note was deleted successfully"
+      redirect_to :action => 'index'
     end
   end
   
