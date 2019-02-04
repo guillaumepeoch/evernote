@@ -13,9 +13,9 @@
           <small><%= days_ago note.updated_at %></small>
         </div>
         <p class="mb-1"><%= note.content %></p>
-        <small>Donec id elit non mi porta.</small>
         <%= link_to 'Show', folder_note_path(@folder.id, note.id), class:'btn btn-primary' %>
         <%= link_to 'Edit', edit_folder_note_path(@folder.id, note.id), class:'btn btn-success' %>
+        <%= link_to 'Delete', folder_note_path(@folder.id, note.id), :method => :delete, :data => {:confirm => 'Are you sure?'}, class:'btn btn-danger' %>
       </div>
     <% end %>
   </div>
