@@ -36,11 +36,6 @@ class FoldersController < ApplicationController
     end
   end
   
-  def get_notes
-    @folder_id = params[:id];
-    @notes = Note.where(folder_id: params[:id])
-  end
-  
   private
 
   def folder_params
