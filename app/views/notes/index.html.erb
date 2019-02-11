@@ -1,4 +1,5 @@
 <h1>Notes</h1>
+<%= render(partial: 'application/breadcrumb') %>
 <%= link_to 'New Note', new_folder_note_path(@folder.id), class: 'btn btn-secondary' %>
 <% if @notes.empty? %>
   <p>

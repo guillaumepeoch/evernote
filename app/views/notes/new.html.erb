@@ -1,2 +1,3 @@
 <h1>New Note</h1>
+<%= render(partial: 'application/breadcrumb', folder: @folder) %>
 <%= render(:partial => 'note_form', :folder => @folder, :note => @note) %>

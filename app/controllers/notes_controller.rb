@@ -40,7 +40,6 @@ class NotesController < ApplicationController
   
   def destroy
     if Note.destroy(params[:id])
-      binding.pry
       flash[:notice] = "The Note was deleted successfully"
       redirect_to :action => 'index'
     end
