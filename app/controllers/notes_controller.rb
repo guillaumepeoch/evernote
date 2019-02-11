@@ -1,4 +1,7 @@
 class NotesController < ApplicationController
+  
+  skip_before_action :verify_authenticity_token
+  
   def index
     @notes = Note.where(folder_id: params[:folder_id]).order('updated_at DESC')
     @folder = Folder.find(params[:folder_id])
