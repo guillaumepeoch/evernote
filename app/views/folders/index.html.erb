@@ -1,17 +1,18 @@
 <h1>Folders</h1>
-<%= link_to 'New Folder', new_folder_path, class:'btn btn-secondary' %>
-<ul class="list-group">
-  <% @folders.each do |folder| %>
-    <li class="list-group-item d-flex align-items-center">
-      <div class="mr-auto p-2">
-        <span class="badge badge-primary badge-pill"><%= folder.notes.size %></span>
-        <%= folder.name %>
-      </div>
-      <div class="p-2">
-        <%= link_to 'Notes', folder_notes_path(folder.id), class:'btn btn-success' %>
-        <%= link_to 'Change Name', edit_folder_path(folder.id), class:'btn btn-primary' %>
-        <%= link_to "Delete", folder_path(folder), :method => :delete, :data => {:confirm => 'Are you sure?'}, class:'btn btn-danger' %>
-      </div>
-    </li>
+<div class="foldersidemenu">
+  
+  <%= link_to new_folder_path, :class => 'cancel-link' do %>
+    <div id='new-folder'>
+      <div id='new-folder-plus'>+</div> New Folder
+    </div>
   <% end %>
-</ul>
+  
+  <% @folders.each do |folder| %>
+    <%= link_to folder_notes_path(folder.id), :class => 'cancel-link block' do %>
+      <div class='item'>
+        <%= folder.name %> 
+      </div>
+    <% end %>
+  <% end %>
+  
+</div>

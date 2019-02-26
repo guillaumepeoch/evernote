@@ -13,3 +13,26 @@
 .margin-top {
   margin-top: 5px;
 }
+
+.notessidemenu {
+  position: fixed;
+  margin-left: 200px;
+  left: 0;
+  top:0;
+  background: LightGreen;
+  height:100%;
+  width: 200px;
+  z-index:0;
+  padding-top:60px;
+}
+
+#new-note-plus {
+  background: LightSeaGreen;
+  border-radius: 50%;
+  left:0;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}

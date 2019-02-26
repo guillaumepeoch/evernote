@@ -45,7 +45,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # RSpec
   gem 'rspec-rails'
+  # This for using expect(response).to RENDER_TEMPLATE(:index)
+  gem 'rails-controller-testing'
+  # This is use to fake data in the controller's test
+  gem 'factory_bot_rails'
 end
 
 group :development do

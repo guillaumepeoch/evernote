@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.list-group {
-  margin-top: 10px;
-}
-
 .foldersidemenu {
   position: fixed;
   left: 0;
@@ -17,45 +13,14 @@
   padding-top:60px;
 }
 
-.notessidemenu {
-  position: fixed;
-  margin-left: 200px;
-  left: 0;
-  top:0;
-  background: LightGreen;
-  height:100%;
-  width: 200px;
-  z-index:0;
-  padding-top:60px;
-}
-
 .item {
-  color:black;
   cursor: pointer;
   border-bottom: 1px black solid;
   padding: 5px 10px;
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
-}
-
-.main {
-  margin-left:400px;
-  padding: 20px;
 }
 
 #new-folder-plus {
   background: LightGreen;
-  border-radius: 50%;
-  left:0;
-  height: 25px;
-  width: 25px;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-}
-
-#new-note-plus {
-  background: LightSeaGreen;
   border-radius: 50%;
   left:0;
   height: 25px;
@@ -73,6 +38,12 @@
   box-shadow: 3px 3px;
 }
 
-.inline {
-  display: inline-block;
+.main {
+  margin-left:400px;
+  padding: 20px;
+}
+
+.cancel-link, .cancel-link:hover {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }

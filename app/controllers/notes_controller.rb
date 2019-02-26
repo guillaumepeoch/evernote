@@ -4,6 +4,7 @@ class NotesController < ApplicationController
   
   def index
     @notes = Note.where(folder_id: params[:folder_id]).order('updated_at DESC')
+    @folders = Folder.order('updated_at DESC')
     @folder = Folder.find(params[:folder_id])
   end
   
