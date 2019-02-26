@@ -1,2 +1,4 @@
 <h1>New Note</h1>
-<%= render(:partial => 'note_form', :folder => @folder, :note => @note) %>
+<%= render :partial => "folders/folder_menu", :locals => { :folders => @folders } %>
+<%= render :partial => "note_menu", :locals => { :notes => @notes, :folder => @folder } %>
+<%= render :partial => 'note_form', :folder => @folder, :note => @note %>

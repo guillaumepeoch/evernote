@@ -9,16 +9,20 @@ class NotesController < ApplicationController
   end
   
   def show
+    @folders = Folder.order('updated_at DESC')
+    @notes = Note.where(folder_id: params[:folder_id]).order('updated_at DESC')
     @note = Note.find(params[:id])
     @folder = Folder.find(params[:folder_id])
   end
   
   def edit
+    @folders = Folder.order('updated_at DESC')
     @folder = Folder.find(params[:folder_id])
     @note = Note.find(params[:id])
   end
     
   def new
+    @folders = Folder.order('updated_at DESC')
     @folder = Folder.find(params[:folder_id])
     @note = @folder.notes.new
   end

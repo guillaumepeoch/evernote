@@ -4,10 +4,12 @@ class FoldersController < ApplicationController
   end
 
   def new
+    @folders = Folder.order('updated_at DESC')
     @folder = Folder.new
   end
   
   def edit
+    @folders = Folder.order('updated_at DESC')
     @folder = Folder.find(params[:id])
   end
 

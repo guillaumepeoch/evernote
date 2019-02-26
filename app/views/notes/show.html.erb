@@ -1,3 +1,5 @@
+<%= render :partial => "folders/folder_menu", :locals => { :folders => @folders } %>
+<%= render :partial => "note_menu", :locals => { :notes => @notes, :folder => @folder } %>
 <h1>Note</h1>
 <h3><%= @note.title %></h3>
 <p><%= @note.content %></p>
