@@ -24,6 +24,7 @@ class NotesController < ApplicationController
   def new
     @folders = Folder.order('updated_at DESC')
     @folder = Folder.find(params[:folder_id])
+    @notes = Array.new
     @note = @folder.notes.new
   end
   

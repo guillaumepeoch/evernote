@@ -16,5 +16,17 @@
 @import 'bootstrap';
 
 .main {
-  margin-top: 5px;
+  margin-top: 55px;
+  margin-left: 400px;
+}
+
+.navbar {
+  position: fixed;
+  z-index:5;
+  top: 0;
+  height: 55px;
+  width: 100%;
+  background-color: teal;
+  color: white;
+  border-bottom: 3px solid black;
 }

@@ -1,14 +1,28 @@
 <div class="notessidemenu">
-  <%= link_to new_folder_path, :class => 'cancel-link' do %>
-    <div id='new-folder'>
-      <div id='new-folder-plus'>+</div> New Note
-    </div>
-  <% end %>
-  <% notes.each do |note| %>
-    <%= link_to folder_note_path(folder.id, note.id), :class => 'cancel-link block' do %>
-      <div class='item'>
-        <%= note.title %> 
+  <% if folder.id %>
+    <%= link_to new_folder_note_path(folder.id), :class => 'cancel-link' do %>
+      <div id='new-folder'>
+        <div id='new-note-plus'>+</div> Note
       </div>
     <% end %>
+    
+    <% if notes.empty? %>
+      <div class='no-note'>
+        No notes yet...
+      </div>
+    <% else %>
+      <% notes.each do |note| %>
+        <%= link_to folder_note_path(folder.id, note.id), :class => 'cancel-link block' do %>
+          <div class='item'>
+            <%= note.title %> 
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+    
+  <% else %>
+    <div class='no-note'>
+      Create that Folder first!
+    </div>
   <% end %>
 </div>

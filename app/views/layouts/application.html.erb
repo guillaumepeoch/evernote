@@ -10,13 +10,19 @@
   </head>
 
   <body>  
-    <%= react_component('Navbar') %>
+    <%# <%= react_component('Navbar') %> %>
     
-    <div class="container main">
-      <% if flash[:notice] %>
-        <div class="alert alert-primary" role="alert"><%= flash[:notice] %></div>
-      <% end %>
-      <%= yield %>
+    <div class="navbar">
+      Evernote
+    </div>
+    
+    <div class="main">
+      <div class="container">
+        <% if flash[:notice] %>
+          <div class="alert alert-primary" role="alert"><%= flash[:notice] %></div>
+        <% end %>
+        <%= yield %>
+      </div>
     </div>
     
   </body>

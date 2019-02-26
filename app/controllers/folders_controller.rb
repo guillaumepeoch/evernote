@@ -1,16 +1,20 @@
 class FoldersController < ApplicationController  
   def index
     @folders = Folder.order('updated_at DESC')
+    @folder = Folder.new
+    @notes = Array.new
   end
 
   def new
     @folders = Folder.order('updated_at DESC')
     @folder = Folder.new
+    @notes = Array.new
   end
   
   def edit
     @folders = Folder.order('updated_at DESC')
     @folder = Folder.find(params[:id])
+    @notes = Array.new
   end
 
   def create
