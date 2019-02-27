@@ -1,29 +1,23 @@
 class NotesController < ApplicationController
   
-  skip_before_action :verify_authenticity_token
+  before_action :menu_requests, only: [:index, :show, :edit, :new]
+  
+  # skip_before_action :verify_authenticity_token
   
   def index
     @notes = Note.where(folder_id: params[:folder_id]).order('updated_at DESC')
-    @folders = Folder.order('updated_at DESC')
-    @folder = Folder.find(params[:folder_id])
   end
   
   def show
-    @folders = Folder.order('updated_at DESC')
     @notes = Note.where(folder_id: params[:folder_id]).order('updated_at DESC')
     @note = Note.find(params[:id])
-    @folder = Folder.find(params[:folder_id])
   end
   
   def edit
-    @folders = Folder.order('updated_at DESC')
-    @folder = Folder.find(params[:folder_id])
     @note = Note.find(params[:id])
   end
     
   def new
-    @folders = Folder.order('updated_at DESC')
-    @folder = Folder.find(params[:folder_id])
     @notes = Array.new
     @note = @folder.notes.new
   end
@@ -55,6 +49,11 @@ class NotesController < ApplicationController
   end
   
   private
+  
+  def menu_requests
+    @folders = Folder.order('updated_at DESC')
+    @folder = Folder.find(params[:folder_id])
+  end
   
   def note_params
     params.require(:note).permit(:title, :content)

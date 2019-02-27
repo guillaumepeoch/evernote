@@ -1,20 +1,16 @@
-class FoldersController < ApplicationController  
+class FoldersController < ApplicationController
+  before_action :menu_requests, only: [:index, :new, :edit]
+  
   def index
-    @folders = Folder.order('updated_at DESC')
     @folder = Folder.new
-    @notes = Array.new
   end
 
   def new
-    @folders = Folder.order('updated_at DESC')
     @folder = Folder.new
-    @notes = Array.new
   end
   
   def edit
-    @folders = Folder.order('updated_at DESC')
     @folder = Folder.find(params[:id])
-    @notes = Array.new
   end
 
   def create
@@ -43,6 +39,11 @@ class FoldersController < ApplicationController
   end
   
   private
+  
+  def menu_requests
+    @folders = Folder.order('updated_at DESC')
+    @notes = Array.new
+  end
 
   def folder_params
     params.require(:folder).permit(:name)
