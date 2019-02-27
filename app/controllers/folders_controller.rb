@@ -14,9 +14,10 @@ class FoldersController < ApplicationController
   end
 
   def create
-    if Folder.create(folder_params)
+    folder = Folder.new(folder_params)
+    if folder.save
       flash[:notice] = "The folder #{folder_params[:name]} was created successfully"
-      redirect_to :action => 'index'
+      redirect_to folder_notes_path(folder.id)
     else
       render :new
     end
