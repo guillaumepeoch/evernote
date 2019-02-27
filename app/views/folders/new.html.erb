@@ -1,4 +1,6 @@
 <h1>New Folder</h1>
-<%= render :partial => "folder_menu", :locals => { :folders => @folders } %>
-<%= render :partial => "notes/note_menu", :locals => { :notes => @notes, :folder => @folder } %>
-<%= render :partial => 'folder_form', :locals => {:f => @folder} %>
+<%= render :partial => 'folder_menu', :locals => { :folders => @folders } %>
+<%= render :partial => 'notes/note_menu', :locals => { :notes => @notes, :folder => @folder } %>
+<div class='center'>
+  <%= render :partial => 'folder_form', :locals => {:f => @folder} %>
+</div>

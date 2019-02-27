@@ -12,14 +12,14 @@
   <body>  
     <%# <%= react_component('Navbar') %> %>
     
-    <div class="navbar">
+    <div class='navbar'>
       Evernote
     </div>
     
-    <div class="main">
-      <div class="container">
+    <div class='main'>
+      <div class='container'>
         <% if flash[:notice] %>
-          <div class="alert alert-primary" role="alert"><%= flash[:notice] %></div>
+          <div class='alert alert-primary' role='alert'><%= flash[:notice] %></div>
         <% end %>
         <%= yield %>
       </div>

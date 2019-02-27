@@ -3,8 +3,8 @@
   <%= f.text_field :title, class: 'form-control' %>
   
   <%= f.label 'Content', class: 'margin-top font-weight-bold' %>
-  <%= f.text_area :content, size: "4x20", class: 'form-control' %>
+  <%= f.text_area :content, size: '4x20', class: 'form-control' %>
   
   <%= f.submit 'Save', class: 'form-btn btn btn-primary' %>
-  <%= link_to "Cancel", folder_notes_path(@folder.id), class: 'form-btn btn btn-secondary' %>
+  <%= link_to 'Cancel', folder_notes_path(@folder.id), class: 'form-btn btn btn-secondary' %>
 <% end %>
