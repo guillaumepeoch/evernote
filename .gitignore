@@ -4,6 +4,7 @@ capybara-*.html
 *.log
 /log
 /tmp
+/db/development.sqlite3
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
@@ -61,3 +62,5 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+*.sqlite3
+db/development.sqlite3

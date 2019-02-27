@@ -2,8 +2,6 @@ class NotesController < ApplicationController
   
   before_action :menu_requests, only: [:index, :show, :edit, :new]
   
-  # skip_before_action :verify_authenticity_token
-  
   def index
     @notes = Note.where(folder_id: params[:folder_id]).order('updated_at DESC')
   end
