@@ -16,7 +16,7 @@ class NotesController < ApplicationController
   end
     
   def new
-    @notes = Array.new
+    @notes = Note.where(folder_id: params[:folder_id]).order('updated_at DESC')
     @note = @folder.notes.new
   end
   
